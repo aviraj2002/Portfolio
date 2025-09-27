@@ -1,31 +1,38 @@
 import { profileData } from '@/lib/data';
-import { Github, Linkedin, Mail, Phone, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 const contactMethods = [
   {
     icon: Mail,
     label: 'Email',
-    value: profileData.email,
     href: `mailto:${profileData.email}`,
+    tooltip: profileData.email,
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: profileData.phone,
     href: `tel:${profileData.phone}`,
+    tooltip: profileData.phone,
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'aviraj2002',
     href: profileData.linkedin,
+    tooltip: 'Connect on LinkedIn',
   },
   {
     icon: Github,
     label: 'GitHub',
-    value: 'aviraj2002',
     href: profileData.github,
+    tooltip: 'View on GitHub',
   },
 ];
 
@@ -40,21 +47,23 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {contactMethods.map((method) => (
-            <div key={method.label} className="flex flex-col items-center text-center">
-              <a href={method.href} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="icon" className="w-16 h-16 rounded-full bg-background hover:bg-accent/10">
-                  <method.icon className="w-8 h-8 text-primary" />
-                </Button>
-              </a>
-              <h3 className="mt-4 text-lg font-semibold">{method.label}</h3>
-              <a href={method.href} target="_blank" rel="noopener noreferrer" className="mt-1 text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
-                {method.value}
-                <ExternalLink className="w-3 h-3" />
-              </a>
-            </div>
-          ))}
+        <div className="mt-12 flex justify-center gap-8">
+          <TooltipProvider>
+            {contactMethods.map((method) => (
+              <Tooltip key={method.label}>
+                <TooltipTrigger asChild>
+                  <Link href={method.href} target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="icon" className="w-16 h-16 rounded-full bg-background hover:bg-accent/10 transition-transform transform hover:scale-110">
+                      <method.icon className="w-8 h-8 text-primary" />
+                    </Button>
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{method.tooltip}</p>
+                </TooltipContent>
+              </Tooltip>
+            ))}
+          </TooltipProvider>
         </div>
       </div>
     </section>
