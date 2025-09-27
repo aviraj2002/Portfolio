@@ -5,6 +5,7 @@ import Projects from "@/components/sections/projects";
 import Skills from "@/components/sections/skills";
 import Contact from "@/components/sections/contact";
 import Footer from "@/components/sections/footer";
+import MotionWrapper from "@/components/motion-wrapper";
 
 export default function Home() {
   return (
@@ -12,10 +13,18 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
+        <MotionWrapper>
+          <Experience />
+        </MotionWrapper>
+        <MotionWrapper>
+          <Projects />
+        </MotionWrapper>
+        <MotionWrapper>
+          <Skills />
+        </MotionWrapper>
+        <MotionWrapper>
+          <Contact />
+        </MotionWrapper>
       </main>
       <Footer />
     </div>
