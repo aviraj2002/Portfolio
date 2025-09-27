@@ -4,6 +4,7 @@ export const profileData = {
   profession: 'Full Stack Developer',
   email: 'abhibarnwalsmd@gmail.com',
   phone: '8102126301',
+  location: 'Dhanbad, India',
   linkedin: 'https://www.linkedin.com/in/aviraj2002/',
   github: 'https://github.com/aviraj2002',
   website: 'https://github.com/aviraj2002',
