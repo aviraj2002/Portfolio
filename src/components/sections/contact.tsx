@@ -41,9 +41,9 @@ export default function Contact() {
     <section id="contact" className="w-full py-16 md:py-24 bg-card">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Get in Touch</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Let's Collaborate</h2>
           <p className="mt-4 text-muted-foreground md:text-xl">
-            I'm open to discussing new projects and opportunities. Feel free to reach out.
+            I'm always looking for new challenges and opportunities to collaborate on exciting projects. Whether you have an idea for a web app or need a skilled Full Stack Developer, I'm ready to connect and build something great together. Feel free to reach out.
           </p>
         </div>
 
