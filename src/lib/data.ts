@@ -45,6 +45,24 @@ export const projectsData = [
     link: 'https://github.com/aviraj2002',
     tags: ['React', 'API', 'CSS']
   },
+  {
+    name: 'College Smart Complaint System',
+    description: 'A web-based platform for students to submit and track complaints within the college, facilitating efficient resolution by administration.',
+    link: 'https://github.com/aviraj2002',
+    tags: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap']
+  },
+  {
+    name: 'Responsive Blog Layout',
+    description: 'A modern and responsive blog layout created with HTML and CSS, focusing on a clean and user-friendly reading experience across all devices.',
+    link: 'https://github.com/aviraj2002',
+    tags: ['HTML5', 'CSS3', 'Responsive Design']
+  },
+  {
+    name: 'Job Search Portal',
+    description: 'A platform connecting job seekers with employers, featuring job listings, search functionality, and application tracking.',
+    link: 'https://github.com/aviraj2002',
+    tags: ['React', 'Node.js', 'API']
+  }
 ];
 
 export const skillsData = {
