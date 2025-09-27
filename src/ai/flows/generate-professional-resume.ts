@@ -67,7 +67,55 @@ const resumePrompt = ai.definePrompt({
   name: 'resumePrompt',
   input: {schema: GenerateProfessionalResumeInputSchema},
   output: {schema: GenerateProfessionalResumeOutputSchema},
-  prompt: `Given the following information, please generate a professional-looking resume.  Format the resume with clear sections for contact information, experience, skills, education, and projects.  Use bullet points to highlight key accomplishments and responsibilities in the experience section. Make sure the contact info is at the top, and present the experience in reverse chronological order.\n\nContact Information:\nName: {{{name}}}\nEmail: {{{email}}}\nPhone: {{{phone}}}\nLinkedIn: {{{linkedin}}}\nGitHub: {{{github}}}\n\nExperience:\n{{#each experience}}\n  Company: {{{company}}}\n  Title: {{{title}}}\n  Years: {{{years}}}\n  Description: {{{description}}}\n{{/each}}\n\nSkills:\n{{#each skills}}\n  - {{{this}}}\n{{/each}}\n\nEducation:\n{{#each education}}\n  Institution: {{{institution}}}\n  Degree: {{{degree}}}\n  Years: {{{years}}}\n{{/each}}\n\nProjects:\n{{#each projects}}\n  Name: {{{name}}}\n  Description: {{{description}}}\n  Link: {{{link}}}\n{{/each}}`,
+  prompt: `Generate a professional resume optimized for Applicant Tracking Systems (ATS). The resume should have a high ATS score (above 90%).
+
+Follow these guidelines strictly:
+- Use a clean, single-column layout. Do not use tables, multi-column layouts, or complex formatting.
+- Use standard, easily parsable section headings: "Contact Information", "Summary", "Experience", "Skills", "Education", "Projects".
+- Start each bullet point in the experience section with a strong action verb.
+- Present experience in reverse chronological order.
+
+Use the provided information to construct the resume.
+
+================================
+Contact Information:
+- Name: {{{name}}}
+- Email: {{{email}}}
+- Phone: {{{phone}}}
+- LinkedIn: {{{linkedin}}}
+- GitHub: {{{github}}}
+
+Summary:
+A passionate Full Stack Developer with hands-on experience in creating dynamic and responsive web applications. Eager to leverage skills in both frontend and backend technologies to contribute to innovative projects and grow within a collaborative team environment.
+
+Experience:
+{{#each experience}}
+- Company: {{{company}}}
+  Title: {{{title}}}
+  Years: {{{years}}}
+  - {{{description}}}
+{{/each}}
+
+Skills:
+{{#each skills}}
+- {{{this}}}
+{{/each}}
+
+Education:
+{{#each education}}
+- Institution: {{{institution}}}
+  Degree: {{{degree}}}
+  Years: {{{years}}}
+{{/each}}
+
+Projects:
+{{#each projects}}
+- Name: {{{name}}}
+  Description: {{{description}}}
+  Link: {{{link}}}
+{{/each}}
+================================
+`,
 });
 
 // Define the Genkit flow for generating the resume
