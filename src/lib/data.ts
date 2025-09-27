@@ -7,7 +7,7 @@ export const profileData = {
   linkedin: 'https://www.linkedin.com/in/aviraj2002/',
   github: 'https://github.com/aviraj2002',
   website: 'https://github.com/aviraj2002',
-  bio: 'Results-driven Full Stack Developer with expertise in MERN stack, REST APIs, and modern cloud technologies. Seeking to contribute to a forward-thinking IT company by applying strong problem-solving skills and a passion for building scalable, high-performance web applications.',
+  bio: "Results-driven Full Stack Developer with expertise in MERN stack, REST APIs, and modern cloud technologies. Seeking to contribute to a forward-thinking IT company by applying strong problem-solving skills and a passion for building scalable, high-performance web applications.",
 };
 
 export const resumeTextData = `Abhishek Kumar Barnwal
@@ -116,6 +116,36 @@ export const projectsData = [
     description: 'A modern, clean, and responsive blog template built with a focus on readability and user experience across all devices.',
     link: 'https://github.com/aviraj2002/Responsive-Blog-Layout',
     tags: ['HTML', 'CSS', 'JavaScript']
+  },
+  {
+    name: 'Weather App',
+    description: 'A simple application to check the current weather conditions for any city.',
+    link: 'https://github.com/aviraj2002/Weather-app',
+    tags: ['JavaScript', 'HTML', 'CSS']
+  },
+  {
+    name: 'BollyTune Music Player',
+    description: 'A web-based music player for listening to Bollywood tunes, created with basic web technologies.',
+    link: 'https://github.com/aviraj2002/BollyTune-Music-Player',
+    tags: ['JavaScript', 'HTML', 'CSS']
+  },
+  {
+    name: 'Tic-Tac-Toe Game',
+    description: 'A classic Tic-Tac-Toe game built with a focus on interactivity and a clean user interface.',
+    link: 'https://github.com/aviraj2002/Tic-Tac-Toe-Game',
+    tags: ['CSS', 'HTML', 'JavaScript']
+  },
+  {
+    name: 'Beatbox Music App',
+    description: 'A simple and fun beatbox application to create and play rhythmic sounds.',
+    link: 'https://github.com/aviraj2002/Beatbox-Music-App',
+    tags: ['HTML', 'CSS', 'JavaScript']
+  },
+  {
+    name: 'Birthday Wish Page',
+    description: 'A creative and interactive web page to send birthday wishes, styled with CSS.',
+    link: 'https://github.com/aviraj2002/Birthday_wish',
+    tags: ['CSS', 'HTML']
   }
 ];
 
