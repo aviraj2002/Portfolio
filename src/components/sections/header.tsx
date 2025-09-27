@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/sheet";
 
 const navLinks = [
-  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
@@ -60,7 +60,7 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-        <Link href="#home" className="text-xl font-bold font-headline text-primary">
+        <Link href="#about" className="text-xl font-bold font-headline text-primary">
           {profileData.name}
         </Link>
         <nav className="hidden md:flex items-center">
@@ -79,7 +79,7 @@ export default function Header() {
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               </SheetHeader>
               <div className="flex flex-col p-6 pt-16">
-                 <Link href="#home" className="mb-8 text-xl font-bold font-headline text-primary" onClick={() => setIsMobileMenuOpen(false)}>
+                 <Link href="#about" className="mb-8 text-xl font-bold font-headline text-primary" onClick={() => setIsMobileMenuOpen(false)}>
                   {profileData.name}
                 </Link>
                 <nav className="flex flex-col space-y-4">
