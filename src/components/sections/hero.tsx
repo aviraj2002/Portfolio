@@ -9,7 +9,7 @@ export default function Hero() {
   const profileImage = {
       "id": "profile-picture",
       "description": "A professional headshot of Abhishek Kumar Barnwal.",
-      "imageUrl": "https://images.unsplash.com/photo-1628157588553-5ee30a6c2623?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBtYW58ZW58MHx8fHwxNzE4NzQ2ODQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758975655553-dc9f0eab001f?q=80&w=1084&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "profile picture"
     };
 
