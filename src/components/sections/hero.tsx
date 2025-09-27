@@ -2,9 +2,12 @@ import Link from 'next/link';
 import { profileData } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, MoveRight } from 'lucide-react';
-import ResumeButton from '@/components/resume-button';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Hero() {
+  const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
+
   return (
     <section id="home" className="relative w-full h-screen flex flex-col items-center justify-center text-center overflow-hidden">
       <div 
@@ -16,7 +19,20 @@ export default function Hero() {
         className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 via-transparent to-primary/5 opacity-50"
       ></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex flex-col justify-center space-y-6">
+        <div className="flex flex-col justify-center space-y-6 items-center">
+          {profileImage && (
+            <div className="mb-4">
+              <Image
+                src={profileImage.imageUrl}
+                alt={profileImage.description}
+                width={150}
+                height={150}
+                className="rounded-full border-4 border-primary/50 object-cover shadow-lg"
+                data-ai-hint={profileImage.imageHint}
+                priority
+              />
+            </div>
+          )}
           <div className="space-y-4">
             <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl xl:text-8xl/none font-headline">
               <span className="text-primary">{profileData.profession.split(' ')[0]} {profileData.profession.split(' ')[1]}</span>
