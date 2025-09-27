@@ -21,9 +21,10 @@ export default function ResumeButton() {
   const [resumeText, setResumeText] = useState('');
   const { toast } = useToast();
 
-  const onGenerateClick = async () => {
+  const onShowResumeClick = async () => {
     setIsLoading(true);
     try {
+      // The action now immediately returns the static resume text
       const result = await handleGenerateResume();
       if (result.success && result.resumeText) {
         setResumeText(result.resumeText);
@@ -39,7 +40,7 @@ export default function ResumeButton() {
       toast({
         variant: 'destructive',
         title: 'Error',
-        description: 'Failed to connect to the resume generation service.',
+        description: 'Failed to connect to the server.',
       });
     } finally {
       setIsLoading(false);
@@ -60,21 +61,21 @@ export default function ResumeButton() {
 
   return (
     <>
-      <Button onClick={onGenerateClick} disabled={isLoading} size="lg" className="w-full sm:w-auto">
+      <Button onClick={onShowResumeClick} disabled={isLoading} size="lg" className="w-full sm:w-auto">
         {isLoading ? (
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
         ) : (
           <FileText className="mr-2 h-4 w-4" />
         )}
-        Generate AI Resume
+        Show Resume
       </Button>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-3xl h-[90vh]">
           <DialogHeader>
-            <DialogTitle>Generated Resume</DialogTitle>
+            <DialogTitle>My Professional Resume</DialogTitle>
             <DialogDescription>
-              Here is your AI-generated professional resume. You can copy the text or download it as a file.
+              You can copy the text or download it as a .txt file.
             </DialogDescription>
           </DialogHeader>
           <ScrollArea className="flex-grow border rounded-md p-4 bg-secondary/50 h-[calc(90vh-180px)]">
