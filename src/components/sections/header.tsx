@@ -9,8 +9,9 @@ import { profileData } from '@/lib/data';
 import {
   Sheet,
   SheetContent,
+  SheetHeader,
+  SheetTitle,
   SheetTrigger,
-  SheetClose,
 } from "@/components/ui/sheet";
 
 const navLinks = [
@@ -74,6 +75,9 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              </SheetHeader>
               <div className="flex flex-col p-6 pt-16">
                  <Link href="#home" className="mb-8 text-xl font-bold font-headline text-primary" onClick={() => setIsMobileMenuOpen(false)}>
                   {profileData.name}
