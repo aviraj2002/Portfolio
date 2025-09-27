@@ -67,15 +67,19 @@ const resumePrompt = ai.definePrompt({
   name: 'resumePrompt',
   input: {schema: GenerateProfessionalResumeInputSchema},
   output: {schema: GenerateProfessionalResumeOutputSchema},
-  prompt: `Generate a professional resume optimized for Applicant Tracking Systems (ATS). The resume should have a high ATS score (above 90%).
+  prompt: `Generate a professional resume based on the provided information.
 
-Follow these guidelines strictly:
-- Use a clean, single-column layout. Do not use tables, multi-column layouts, or complex formatting.
-- Use standard, easily parsable section headings: "Contact Information", "Summary", "Experience", "Skills", "Education", "Projects".
-- Start each bullet point in the experience section with a strong action verb.
-- Present experience in reverse chronological order.
+Use a clean, standard, single-column format that is easy for Applicant Tracking Systems (ATS) to parse.
 
-Use the provided information to construct the resume.
+Structure the resume with the following sections:
+- Contact Information
+- Summary
+- Experience
+- Skills
+- Education
+- Projects
+
+Present experience in reverse chronological order. Start each bullet point in the experience section with a strong action verb.
 
 ================================
 Contact Information:
