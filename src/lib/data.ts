@@ -94,40 +94,28 @@ export const educationData = [
 
 export const projectsData = [
   {
-    name: 'E-commerce Web Application',
-    description: 'A full-stack app with product catalog, cart, and secure checkout. Implemented JWT authentication, role-based access, and improved API performance by 35%.',
-    link: 'https://github.com/aviraj2002',
-    tags: ['MERN Stack', 'JWT', 'REST API']
+    name: 'Job Search Portal',
+    description: 'A comprehensive platform for job seekers to find roles and for recruiters to post job openings and manage applications.',
+    link: 'https://github.com/aviraj2002/JOB-SEARCH-PORTAL',
+    tags: ['React.js', 'Node.js', 'Express', 'MongoDB']
   },
   {
-    name: 'Online Food Delivery System',
-    description: 'Designed REST APIs for order management, profiles, and tracking. Integrated payment gateway simulation and reduced query response time by 20%.',
-    link: 'https://github.com/aviraj2002',
-    tags: ['FastAPI', 'MongoDB', 'Payments']
+    name: 'E-Commerce Website',
+    description: 'A full-featured e-commerce platform with product listings, a shopping cart, and a secure checkout process.',
+    link: 'https://github.com/aviraj2002/E-Commerce-Web',
+    tags: ['MERN Stack', 'JWT', 'Stripe API']
   },
   {
-    name: 'Real-time Chat Application',
-    description: 'Built a chat app with group messaging, private chats, and online indicators. Optimized queries, reducing database latency by 25%.',
-    link: 'https://github.com/aviraj2002',
-    tags: ['Node.js', 'WebSockets', 'Databases']
+    name: 'College Smart Complaint System',
+    description: 'A system for students to submit complaints and for college administration to track and resolve them efficiently.',
+    link: 'https://github.com/aviraj2002/College-Smart-Complaint-M',
+    tags: ['HTML', 'CSS', 'JavaScript', 'PHP']
   },
   {
-    name: 'URL Shortener Service',
-    description: 'Designed a high-availability system capable of handling 1M+ requests/sec using hashing and caching for faster redirection.',
-    link: 'https://github.com/aviraj2002',
-    tags: ['Node.js', 'Redis', 'MongoDB']
-  },
-  {
-    name: 'Portfolio Website',
-    description: 'Built and deployed a responsive personal portfolio showcasing skills and projects using modern web technologies.',
-    link: 'https://github.com/aviraj2002',
-    tags: ['React.js', 'Next.js', 'Tailwind CSS']
-  },
-  {
-    name: 'Library Management System',
-    description: 'Created a console-based system for borrowing, returns, and fine calculation, focusing on object-oriented principles.',
-    link: 'https://github.com/aviraj2002',
-    tags: ['C++', 'OOP']
+    name: 'Responsive Blog Layout',
+    description: 'A modern, clean, and responsive blog template built with a focus on readability and user experience across all devices.',
+    link: 'https://github.com/aviraj2002/Responsive-Blog-Layout',
+    tags: ['HTML', 'CSS', 'JavaScript']
   }
 ];
 
