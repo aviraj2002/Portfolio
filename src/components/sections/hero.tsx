@@ -1,13 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { profileData } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin } from 'lucide-react';
 import ResumeButton from '@/components/resume-button';
 
 export default function Hero() {
-  const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
+  const profileImage = {
+      "id": "profile-picture",
+      "description": "A professional headshot of Abhishek Kumar Barnwal.",
+      "imageUrl": "https://images.unsplash.com/photo-1628157588553-5ee30a6c2623?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBtYW58ZW58MHx8fHwxNzE4NzQ2ODQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "profile picture"
+    };
 
   return (
     <section id="home" className="w-full min-h-screen flex items-center justify-center py-12 md:py-24 lg:py-32 bg-background">
