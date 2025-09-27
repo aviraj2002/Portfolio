@@ -38,7 +38,7 @@ const contactMethods = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="w-full py-16 md:py-24 bg-card">
+    <section id="contact" className="w-full py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Let's Collaborate</h2>
@@ -53,7 +53,7 @@ export default function Contact() {
               <Tooltip key={method.label}>
                 <TooltipTrigger asChild>
                   <Link href={method.href} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="icon" className="w-16 h-16 rounded-full bg-background hover:bg-accent/10 transition-transform transform hover:scale-110">
+                    <Button variant="outline" size="icon" className="w-16 h-16 rounded-full bg-background hover:bg-primary/10 transition-transform transform hover:scale-110">
                       <method.icon className="w-8 h-8 text-primary" />
                     </Button>
                   </Link>

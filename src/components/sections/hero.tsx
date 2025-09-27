@@ -1,76 +1,47 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { profileData } from '@/lib/data';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin } from 'lucide-react';
+import { ChevronDown, MoveRight } from 'lucide-react';
 import ResumeButton from '@/components/resume-button';
 
 export default function Hero() {
-  const profileImage = {
-      "id": "profile-picture",
-      "description": "A professional headshot of Abhishek Kumar Barnwal.",
-      "imageUrl": "https://images.unsplash.com/photo-1758975655553-dc9f0eab001f?q=80&w=1084&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "profile picture"
-    };
-
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center justify-center py-20 md:py-32 bg-background overflow-hidden">
-      <div
+    <section id="home" className="relative w-full h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+      <div 
+        aria-hidden="true" 
+        className="absolute inset-0 z-0 bg-gradient-to-br from-[#1b1a2e] via-[#131224] to-[#0b0a1a]"
+      ></div>
+       <div 
         aria-hidden="true"
-        className="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
-      >
-        <div className="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
-        <div className="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
-      </div>
-      <div className="container mx-auto px-4 md:px-6 relative">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-          <div className="flex flex-col justify-center space-y-6 text-center lg:text-left">
-            <div className="space-y-4">
-              <p className="text-lg md:text-xl text-primary font-semibold">
-                Hello, I'm
-              </p>
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline text-foreground">
-                {profileData.name}
-              </h1>
-              <p className="text-2xl md:text-3xl text-accent font-bold tracking-wide">
-                {profileData.profession}
-              </p>
-              <p className="max-w-[600px] text-muted-foreground md:text-lg mx-auto lg:mx-0">
-                {profileData.bio}
-              </p>
-            </div>
-            <div className="flex flex-col gap-4 min-[400px]:flex-row justify-center lg:justify-start">
-              <ResumeButton />
-              <div className="flex justify-center lg:justify-start gap-3">
-                <Link href={profileData.linkedin} target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg">
-                    <Linkedin className="h-5 w-5" />
-                    <span className="sr-only">LinkedIn</span>
-                  </Button>
-                </Link>
-                <Link href={profileData.github} target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg">
-                    <Github className="h-5 w-5" />
-                    <span className="sr-only">GitHub</span>
-                  </Button>
-                </Link>
-              </div>
-            </div>
+        className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 via-transparent to-primary/5 opacity-50"
+      ></div>
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="flex flex-col justify-center space-y-6">
+          <div className="space-y-4">
+            <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl xl:text-8xl/none font-headline">
+              <span className="text-primary">{profileData.profession.split(' ')[0]} {profileData.profession.split(' ')[1]}</span>
+              <span className="text-foreground"> {profileData.profession.split(' ').slice(2).join(' ')}</span>
+            </h1>
+            <p className="max-w-[700px] text-muted-foreground md:text-xl mx-auto">
+              AI Automation & Workflows Expert. <br/> {profileData.bio}
+            </p>
           </div>
-          <div className="flex items-center justify-center">
-            {profileImage && (
-              <Image
-                src={profileImage.imageUrl}
-                alt={profileImage.description}
-                width={500}
-                height={500}
-                priority
-                className="rounded-full object-cover aspect-square border-4 border-primary/50 shadow-2xl"
-                data-ai-hint={profileImage.imageHint}
-              />
-            )}
+          <div className="flex flex-col gap-4 min-[400px]:flex-row justify-center">
+            <Button asChild size="lg">
+                <Link href="#contact">Get In Touch</Link>
+            </Button>
+            <Button asChild variant="link" size="lg" className="text-foreground">
+                <Link href="#projects">
+                    View My Work <MoveRight className="ml-2 h-5 w-5" />
+                </Link>
+            </Button>
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+        <Link href="#experience">
+          <ChevronDown className="h-8 w-8 text-foreground animate-bounce" />
+        </Link>
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import { Building } from 'lucide-react';
 
 export default function Experience() {
   return (
-    <section id="experience" className="w-full py-20 md:py-32 bg-card">
+    <section id="experience" className="w-full py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">
@@ -19,12 +19,12 @@ export default function Experience() {
           {experienceData.map((item, index) => (
             <div key={index} className={`relative mb-12 flex items-center w-full ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
               <div className="w-1/2">
-                <Card className={`shadow-lg hover:shadow-xl transition-shadow duration-300 ${index % 2 === 0 ? 'mr-8' : 'ml-8'}`}>
+                <Card className={`shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card border-border/50 ${index % 2 === 0 ? 'mr-8' : 'ml-8'}`}>
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>
                         <CardTitle className="text-xl font-headline">{item.title}</CardTitle>
-                        <CardDescription className="text-accent font-semibold pt-1">{item.company}</CardDescription>
+                        <CardDescription className="text-primary/80 font-semibold pt-1">{item.company}</CardDescription>
                       </div>
                       <div className="text-sm text-muted-foreground whitespace-nowrap pl-4">{item.years}</div>
                     </div>
