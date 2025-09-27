@@ -25,8 +25,8 @@ export default function Hero() {
               <Image
                 src={profileImage.imageUrl}
                 alt={profileImage.description}
-                width={150}
-                height={150}
+                width={200}
+                height={200}
                 className="rounded-full border-4 border-primary/50 object-cover shadow-lg"
                 data-ai-hint={profileImage.imageHint}
                 priority
